@@ -1,0 +1,13 @@
+.gray {
+  background-color: #f8f8f8;
+  height: calc(90vh - 4px);
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}

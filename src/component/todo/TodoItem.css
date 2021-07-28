@@ -1,0 +1,12 @@
+.TodoItem__Id {
+  width: 10%;
+}
+
+.TodoItem__Name {
+  width: 70%;
+  text-align: left;
+}
+
+.TodoItem__Button {
+  width: 20%;
+}
