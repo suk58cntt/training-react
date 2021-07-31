@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './TodoItem.css';
+import './ReduxItem.css';
 
-const TodoItem = ({
+const ReduxItem = ({
   id,
   name,
   isUpdate,
@@ -15,7 +15,7 @@ const TodoItem = ({
     setNameTemp(e.target.value);
   };
 
-  const handleKeyEnter = (e) => {
+  const handleEnter = (e) => {
     if (e.key === 'Enter') {
       funcUpdate(id, nameTemp);
     }
@@ -25,17 +25,17 @@ const TodoItem = ({
     <>
       {isUpdate ? (
         <tr>
-          <td className="TodoItem__Id">{id}</td>
-          <td className="TodoItem__Name">
+          <td className="ReduxItem__Id">{id}</td>
+          <td className="ReduxItem__Name">
             <input
               className="form-control"
               type="text"
               value={nameTemp}
               onChange={(e) => changeName(e)}
-              onKeyUp={(e) => handleKeyEnter(e)}
+              onKeyUp={(e) => handleEnter(e)}
             />
           </td>
-          <td className="TodoItem__Button">
+          <td className="ReduxItem__Button">
             <input
               className="btn btn-primary"
               type="button"
@@ -52,9 +52,9 @@ const TodoItem = ({
         </tr>
       ) : (
         <tr>
-          <td className="TodoItem__Id">{id}</td>
-          <td className="TodoItem__Name">{name}</td>
-          <td className="TodoItem__Button">
+          <td className="ReduxItem__Id">{id}</td>
+          <td className="ReduxItem__Name">{name}</td>
+          <td className="ReduxItem__Button">
             <input
               className="btn btn-warning"
               type="button"
@@ -74,4 +74,4 @@ const TodoItem = ({
   );
 };
 
-export default TodoItem;
+export default ReduxItem;

@@ -14,18 +14,18 @@ const Todo = () => {
   };
 
   const handleEventEnter = (e) => {
-    const { value } = e.target;
-    const newData = [...data];
-
-    const id = newData.length === 0 ? 1 : newData[newData.length - 1].id + 1;
-
-    const payload = {
-      id: id,
-      name: value,
-      isUpdate: false,
-    };
-
     if (e.key === 'Enter') {
+      const { value } = e.target;
+      const newData = [...data];
+
+      const id = newData.length === 0 ? 1 : newData[newData.length - 1].id + 1;
+
+      const payload = {
+        id: id,
+        name: value,
+        isUpdate: false,
+      };
+
       setText('');
       newData.push(payload);
       setData(newData);
@@ -34,7 +34,6 @@ const Todo = () => {
 
   const handleEdit = (id) => {
     const newData = [...data];
-    console.log('edit', id);
     newData.forEach((item) => {
       if (item.id === id) {
         item.isUpdate = true;
@@ -45,7 +44,6 @@ const Todo = () => {
 
   const handleCancel = (id) => {
     const newData = [...data];
-    console.log('edit', id);
     newData.forEach((item) => {
       if (item.id === id) {
         item.isUpdate = false;
@@ -55,7 +53,6 @@ const Todo = () => {
   };
 
   const handleUpdate = (id, text) => {
-    console.log('edit', id, text);
     const newData = [...data];
     newData.forEach((item) => {
       if (item.id === id) {
@@ -67,7 +64,6 @@ const Todo = () => {
   };
 
   const handleDelete = (id) => {
-    console.log('delete');
     const index = data.findIndex((x) => x.id === id);
 
     if (index < 0) return;

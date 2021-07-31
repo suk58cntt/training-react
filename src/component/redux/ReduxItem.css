@@ -1,0 +1,12 @@
+.ReduxItem__Id {
+  width: 10%;
+}
+
+.ReduxItem__Name {
+  width: 70%;
+  text-align: left;
+}
+
+.ReduxItem__Button {
+  width: 20%;
+}
