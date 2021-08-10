@@ -13,7 +13,7 @@ const Todo = () => {
     setText(e.target.value);
   };
 
-  const handleEventEnter = (e) => {
+ const handleEventEnter = (e) => {
     if (e.key === 'Enter') {
       const { value } = e.target;
       const newData = [...data];
@@ -30,7 +30,7 @@ const Todo = () => {
       newData.push(payload);
       setData(newData);
     }
-  };
+  }; 
 
   const handleEdit = (id) => {
     const newData = [...data];

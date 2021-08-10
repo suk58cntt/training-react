@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import Es6 from '../es6/Es6';
+// import Es6 from '../es6/Es6';
 import ReactJs from '../reactJs/ReactJs';
 import Redux from '../redux/Redux';
 import Todo from '../todo/Todo';
@@ -30,9 +30,9 @@ const Router = () => {
 
           <div className="collapse navbar-collapse navbar-ex1-collapse">
             <ul className="nav navbar-nav">
-              <li className="active">
+              {/* <li className="active">
                 <Link to="/es6">ES6</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/todo">Todo</Link>
               </li>
@@ -89,9 +89,9 @@ const Router = () => {
             <div className="col-sm-2 gray"></div>
             <div className="col-sm-8">
               <Switch>
-                <Route path="/es6">
+                {/* <Route path="/es6">
                   <Es6 />
-                </Route>
+                </Route> */}
                 <Route path="/todo">
                   <Todo />
                 </Route>

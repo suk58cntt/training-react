@@ -9,7 +9,7 @@ import {
 } from '../../redux/actions';
 import ReduxItem from './ReduxItem';
 
-const Redux = () => {
+const ReduxUI = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState('');
 
@@ -93,4 +93,4 @@ const Redux = () => {
   );
 };
 
-export default Redux;
+export default ReduxUI;

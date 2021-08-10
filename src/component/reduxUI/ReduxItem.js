@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './ReduxItem.css';
 
 const ReduxItem = ({
@@ -75,3 +76,13 @@ const ReduxItem = ({
 };
 
 export default ReduxItem;
+
+ReduxItem.prototype = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  isUpdate: PropTypes.func.isRequired,
+  funcUpdate: PropTypes.func.isRequired,
+  funcCancel: PropTypes.func.isRequired,
+  funcEdit: PropTypes.func.isRequired,
+  funcDelete: PropTypes.func.isRequired,
+};

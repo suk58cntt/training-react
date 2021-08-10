@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './TodoItem.css';
 
 const TodoItem = ({
@@ -75,3 +76,13 @@ const TodoItem = ({
 };
 
 export default TodoItem;
+
+TodoItem.prototype = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  isUpdate: PropTypes.func.isRequired,
+  funcUpdate: PropTypes.func.isRequired,
+  funcCancel: PropTypes.func.isRequired,
+  funcEdit: PropTypes.func.isRequired,
+  funcDelete: PropTypes.func.isRequired,
+};
